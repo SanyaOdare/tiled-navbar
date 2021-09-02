@@ -14,18 +14,19 @@ body {
   align-items: center;  
   background-image: linear-gradient(to right, #1c173f, #53063A, #1c173f);
   color: #fff;
-  font-family: 'Roboto', sans-serif;
-  font-weight: 900;
+  font-family: 'Roboto', sans-serif;  
 }
 
 .main-nav {
   font-size: 120px;
   text-transform: capitalize;
+  font-weight: 900;
 }
 
 #center-o {
   color: #FF3124;
 }
+
 /* links */
 .links-container {
   width: 100%;
@@ -34,6 +35,14 @@ body {
   top: 0;
   left: 0;
   display: flex;
+  opacity: 1;
+  pointer-events: all;
+  transition: ,5s;
+}
+
+.links-container.hide {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .link {
@@ -71,10 +80,56 @@ body {
   background-image: linear-gradient(to right, #1c173f, #53063A, #1c173f);
 }
 
+.link p {
+  color: #fff;
+  position: absolute;
+  bottom: 310px;
+  right: -200px;
+  width: 150%;
+  height: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 50px;
+  transform: rotate(-90deg);
+}
 
-/* .nav-bg {
-  
-} */
+/* toggle-btn */
+
+.toggle-btn {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  background: #2f2f2f;
+  border-radius: 50%;
+  z-index: 99;
+  cursor: pointer;
+}
+
+.toggle-btn span {
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background: #fff;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toggle-btn span:nth-child(2) {
+  top: 60%;
+}
+
+.toggle-btn.active span {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.toggle-btn.active span:nth-child(2) {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 
 /* my colors */
   /* #2A2162, #53063A, #FF3124, #1c173f */
