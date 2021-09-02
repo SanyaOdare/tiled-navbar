@@ -37,7 +37,7 @@ body {
   display: flex;
   opacity: 1;
   pointer-events: all;
-  transition: ,5s;
+  transition: .5s;
 }
 
 .links-container.hide {
@@ -115,6 +115,7 @@ body {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: .5s;
 }
 
 .toggle-btn span:nth-child(2) {
